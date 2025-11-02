@@ -14,8 +14,8 @@ const RootLayout = () => {
   const suggestionsRef = useRef(null);
 
   const API_KEY = "786b06a112d44f7196c30854251810";
-  const API_URL = `http://api.weatherapi.com/v1/current.json`;
-  const SEARCH_API_URL = `http://api.weatherapi.com/v1/search.json`;
+  const API_URL = `https://api.weatherapi.com/v1/current.json`;
+  const SEARCH_API_URL = `https://api.weatherapi.com/v1/search.json`;
 
   // Auto-complete khi người dùng gõ
   useEffect(() => {
