@@ -1,16 +1,97 @@
-# React + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React weather application that provides real-time weather information for any city worldwide. Features include city search with autocomplete, detailed weather data display, and a responsive design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 **City Search** - Search for any city with autocomplete suggestions
+- 🌤️ **Current Weather** - View temperature, conditions, humidity, wind speed, and more
+- 📱 **Responsive Design** - Works seamlessly on desktop and mobile devices
+- ⚡ **Fast & Modern** - Built with React and Vite for optimal performance
+- 🎯 **User-Friendly** - Intuitive interface with keyboard navigation support
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** - UI library
+- **Vite** - Build tool and dev server
+- **React Router DOM** - Client-side routing
+- **WeatherAPI.com** - Weather data provider
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd weatherApp
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env` file in the root directory:
+```bash
+VITE_WEATHER_API_KEY=your_api_key_here
+```
+
+4. Get your API key from [WeatherAPI.com](https://www.weatherapi.com/)
+
+5. Start the development server:
+```bash
+npm run dev
+```
+
+6. Open your browser and navigate to `http://localhost:5173`
+
+## Project Structure
+
+```
+weatherApp/
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   └── WeatherDisplay.jsx
+│   ├── layouts/             # Layout components
+│   │   ├── RootLayout.jsx
+│   │   └── RootLayout.css
+│   ├── pages/               # Page components
+│   │   └── Home.jsx
+│   ├── services/            # API services
+│   │   └── weatherApi.js
+│   ├── App.jsx              # Main app component
+│   ├── main.jsx             # Entry point
+│   └── index.css            # Global styles
+├── public/                  # Static assets
+├── .env                     # Environment variables (git-ignored)
+├── .env.example             # Example environment file
+├── package.json
+└── vite.config.js
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Environment Variables
+
+- `VITE_WEATHER_API_KEY` - Your WeatherAPI.com API key
+
+## API
+
+This project uses [WeatherAPI.com](https://www.weatherapi.com/) for weather data:
+- Current weather data
+- Location search for autocomplete
+
+## License
+
+MIT

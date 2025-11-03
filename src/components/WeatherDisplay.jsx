@@ -1,5 +1,4 @@
 import React from "react";
-import "../layouts/RootLayout.css";
 
 const WeatherDisplay = ({ error, weatherData }) => {
   if (error) {
